@@ -1,0 +1,34 @@
+﻿<Window x:Class="ManageMyUtility.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManageMyUtility"
+        mc:Ignorable="d"
+        
+        Title="Home" Height="250" Width="444" MinWidth="320" MinHeight="310"
+        Background="{DynamicResource BackgroundBrush}">
+    <Grid x:Name="windowMain" Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="75"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Utility manager" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="30" Foreground="{DynamicResource ForegroundBrush}" MinHeight="49.9" Padding="5,5,5,5" UseLayoutRounding="False" Grid.IsSharedSizeScope="True" MinWidth="212" Height="50" Width="213" Grid.ColumnSpan="3"/>
+
+        <Button x:Name="Btn_settings" Content="⚙" VerticalAlignment="Center" FontSize="30" Click="Button_Click" Height="55" Foreground="{DynamicResource ForegroundBrush}" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Column="3" Margin="10,0,10,0"/>
+        <Button x:Name="Btn_notes" Content="📝" Margin="10,10,10,10" Click="Button_Click_notes" FontSize="46" IsCancel="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="10.8,-5,1,1" UseLayoutRounding="False" Foreground="{DynamicResource ForegroundBrush}" Background="{x:Null}" BorderBrush="{DynamicResource ForegroundBrush}" MinWidth="75" MinHeight="75" Grid.Row="1" Grid.Column="1"
+                />
+        <Button x:Name="Btn_stopwatch" Content="⏱" Margin="10,10,10,10" Click="Button_Click_stopwatch" FontSize="46" IsCancel="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="3,-5,1,1" UseLayoutRounding="False" Foreground="{DynamicResource ForegroundBrush}" Background="{x:Null}" BorderBrush="{DynamicResource ForegroundBrush}" MinWidth="75" MinHeight="75" Grid.Row="1"
+                />
+
+
+
+    </Grid>
+</Window>

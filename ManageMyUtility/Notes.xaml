@@ -1,0 +1,34 @@
+﻿<Window x:Class="ManageMyUtility.Notes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ManageMyUtility"
+        mc:Ignorable="d"
+        Title="Notes" Height="450" MinHeight="300" Width="573" MinWidth="563"
+        Background="{DynamicResource BackgroundBrush}"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170"/>
+            <ColumnDefinition Width="252*"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" Content="Notes" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Foreground="{DynamicResource ForegroundBrush}" Height="50" Width="88"/>
+        <ListBox x:Name="listBox_notes" d:ItemsSource="{d:SampleData ItemCount=5}" Background="{DynamicResource BackgroundBrush}" Foreground="{DynamicResource ForegroundBrush}" FontSize="17" SelectionChanged="listBox_notes_SelectionChanged" Grid.Row="1" Margin="10,10,10,10"/>
+        <Button x:Name="btn_addNote" Content="Add note" Click="Button_addNotes" FontSize="16" Background="{DynamicResource BackgroundBrush}" Foreground="{DynamicResource ForegroundBrush}" Grid.Row="2" Margin="10,10,10,10" />
+        <TextBox x:Name="textBox_notes" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" Margin="10,10,10,10" Foreground="{DynamicResource ForegroundBrush}" Background="{DynamicResource BackgroundBrush}" TextChanged="textBox_notes_TextChanged" FontSize="17" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" IsEnabled="False"/>
+        <Button x:Name="btn_deleteNote" Content="Delete Note" HorizontalAlignment="Left" Click="Button_deleteNotes" Width="150" FontSize="16" Margin="10,10,0,10" Background="{DynamicResource BackgroundBrush}" Foreground="{DynamicResource ForegroundBrush}" Grid.Row="2" Grid.Column="1" />
+        <Button x:Name="btn_saveandclose" Content="Save &amp; Close" Click="Button_Click" FontSize="16" Margin="10,10,10,10" Background="{DynamicResource BackgroundBrush}" Foreground="{DynamicResource ForegroundBrush}" Grid.Row="2" Grid.Column="2" />
+        <Label x:Name="label_error" Content="Name exist, choose a different one" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="238" Height="25" Foreground="Red" FontSize="11" Visibility="Hidden" Grid.Column="1"/>
+        <TextBox x:Name="textBox_name" Foreground="{DynamicResource ForegroundBrush}" Background="{DynamicResource BackgroundBrush}" TextWrapping="Wrap" FontSize="17" TextChanged="textBox_name_TextChanged" Grid.Column="1" Margin="10,25,10,10" MaxLines="1" MaxWidth="225" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="225" IsEnabled="False"/>
+
+
+    </Grid>
+    
+</Window>
