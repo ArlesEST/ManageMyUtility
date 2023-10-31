@@ -57,10 +57,6 @@ namespace ManageMyUtility
 
         
 
-   
-
-
-
         private void Button_Click_stopwatch(object sender, RoutedEventArgs e)
         {
             Stopwatch stopwatch = new Stopwatch();
