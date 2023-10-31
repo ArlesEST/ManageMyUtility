@@ -55,10 +55,16 @@ namespace ManageMyUtility
             }
         }
 
-        private void Button_Click_calculator(object sender, RoutedEventArgs e)
+        
+
+   
+
+
+
+        private void Button_Click_stopwatch(object sender, RoutedEventArgs e)
         {
-            GradeCalculator gradeCalculator = new GradeCalculator();
-            gradeCalculator.Show();
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Show();
         }
 
         private void Button_Click_notes(object sender, RoutedEventArgs e)
@@ -73,26 +79,6 @@ namespace ManageMyUtility
             {
                 MessageBox.Show("Set a file path in the settings first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-        private void Button_Click_passwordManager(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_stopwatch(object sender, RoutedEventArgs e)
-        {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Show();
-        }
-
-        private void Button_Click_random(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_checklist(object sender, RoutedEventArgs e)
-        {
         }
     }
 }
